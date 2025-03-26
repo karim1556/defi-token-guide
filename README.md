@@ -1,69 +1,93 @@
-# Welcome to your Lovable project
 
-## Project info
+# Solana DeFi Token Assistant
 
-**URL**: https://lovable.dev/projects/fac7232e-3c1a-4ece-944c-dc5118344c2a
+A unified solution for simplified token management on the Solana blockchain, featuring a multi-platform bot system (Discord & Telegram) and web dashboard.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Multi-platform bot support (Discord & Telegram)
+- Consistent command structure across platforms
+- Web dashboard for token project management
+- Integration with Solana blockchain
 
-**Use Lovable**
+## Commands
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fac7232e-3c1a-4ece-944c-dc5118344c2a) and start prompting.
+- `/create` - Initiates a Solana token project
+- `/stats` - Retrieves real-time Solana market insights
+- `/help` - Provides assistance and usage guidance
 
-Changes made via Lovable will be committed automatically to this repo.
+## Environment Setup
 
-**Use your preferred IDE**
+1. Copy the `.env.example` file to a new file called `.env`
+2. Fill in the required environment variables:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Telegram Bot Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Create a new bot on Telegram by messaging [@BotFather](https://t.me/BotFather)
+2. Follow the instructions to create a bot and receive a token
+3. Set the `TELEGRAM_BOT_TOKEN` in your `.env` file
+4. Set `TELEGRAM_ENABLED=true` to enable the Telegram bot
 
-Follow these steps:
+### Discord Bot Setup
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Create a new application
+3. Navigate to the "Bot" tab and add a bot
+4. Copy the token and set `DISCORD_BOT_TOKEN` in your `.env` file
+5. Copy the application ID and set `DISCORD_CLIENT_ID` in your `.env` file
+6. For development, you can set `DISCORD_GUILD_ID` to a specific server ID
+7. Set `DISCORD_ENABLED=true` to enable the Discord bot
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Installation and Running
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Node.js (v16 or later)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd solana-defi-token-assistant
+
+# Install dependencies
+npm install
+```
+
+### Running the Application
+
+```bash
+# Start the web application and bots
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Bot Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Token Creation**: Guide users through creating Solana tokens
+- **Market Stats**: Provide real-time Solana market insights
+- **Help System**: Assist users with available commands and usage
 
-**Use GitHub Codespaces**
+## Web Dashboard
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The web dashboard provides a user-friendly interface for:
 
-## What technologies are used for this project?
+- Token project management
+- Solana market analytics
+- User account management
 
-This project is built with .
+## Development
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+To contribute to the project:
 
-## How can I deploy this project?
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-Simply open [Lovable](https://lovable.dev/projects/fac7232e-3c1a-4ece-944c-dc5118344c2a) and click on Share -> Publish.
+## License
 
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the MIT License - see the LICENSE file for details.
