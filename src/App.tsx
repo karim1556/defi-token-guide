@@ -9,6 +9,7 @@ import Create from "./pages/Create";
 import Stats from "./pages/Stats";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
+import Bots from "./pages/Bots";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/create" element={<Create />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/bots" element={<Bots />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
